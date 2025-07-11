@@ -288,6 +288,7 @@
 
   &__container {
     position: relative;
+    margin-bottom: min(5.21vw, 100px);
   }
 
   &__imgBlock {
@@ -314,7 +315,7 @@
     flex-direction: column;
     min-height: min(22.29vw, 428px);
     padding: min(2.08vw, 40px);
-    border-radius: 10px 10px 100px 10px;
+    border-radius: min(.52vw, 10px) min(.52vw, 10px) min(5.21vw, 100px) min(.52vw, 10px);
     background: linear-gradient(0deg, rgba(142, 216, 238, .90) 0%, rgba(142, 216, 238, .90) 100%), url(<path-to-image>) lightgray 50% / cover no-repeat;
 
     &::after {
@@ -371,6 +372,102 @@
     margin-top: min(3.13vw, 60px);
 
     column-gap: min(1.04vw, 20px);
+  }
+
+  &__bottomImgBlock {
+    @include back_img;
+    width: 100%;
+    height: min(25.42vw, 488px);
+    background-image: url(../img/about_bottom_img.jpg);
+  }
+}
+
+.miss {
+  position: relative;
+  padding-bottom: min(10.42vw, 200px);
+  background-color: #f6f6f6;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: max(-5.21vw, -100px);
+    left: 0;
+    width: 100%;
+    height: min(5.21vw, 100px);
+    border-radius: min(2.60vw, 50px) min(2.60vw, 50px) 0 0;
+    background-color: #f6f6f6;
+  }
+
+  & h2 {
+    position: relative;
+    z-index: 1000;
+    display: inline;
+    font-size: min(2.50vw, 48px);
+    font-weight: 700;
+    font-style: normal;
+    line-height: normal;
+    color: #000000;
+    text-transform: uppercase;
+  }
+
+  & ul:has(> .miss__itemElem) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: min(3.13vw, 60px) ;
+
+    gap: min(1.04vw, 20px);
+  }
+
+  &__itemElem {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+    height: auto;
+    min-height: min(20.83vw, 400px);
+    padding: min(2.08vw, 40px);
+    border-radius: min(.52vw, 10px) min(.52vw, 10px) min(5.21vw, 100px) min(.52vw, 10px);
+    background-color: white;
+
+    &:first-child {
+      background-color: #99daeb;
+    }
+
+    & > ul {
+      display: flex;
+      flex-direction: column;
+      padding-left: min(.78vw, 15px);
+      list-style-type: disc;
+
+      row-gap: min(1.04vw, 20px);
+    }
+  }
+
+  &__itemDecr {
+    font-size: min(1.25vw, 24px);
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
+    color: #000000;
+  }
+
+  & h4 {
+    margin-bottom: min(1.56vw, 30px);
+    font-size: min(2.08vw, 40px);
+    font-weight: 600;
+    font-style: normal;
+    line-height: normal;
+    color: #000000;
+    text-transform: uppercase;
+
+    & + p {
+      max-width: 90%;
+      margin-top: auto;
+      font-size: min(1.25vw, 24px);
+      font-weight: 400;
+      font-style: normal;
+      line-height: normal;
+      color: #000000;
+    }
   }
 }
 

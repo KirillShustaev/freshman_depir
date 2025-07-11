@@ -733,6 +733,7 @@ hr {
 }
 .about__container {
   position: relative;
+  margin-bottom: min(5.21vw, 100px);
 }
 .about__imgBlock {
   background-repeat: no-repeat;
@@ -757,7 +758,7 @@ hr {
   flex-direction: column;
   min-height: min(22.29vw, 428px);
   padding: min(2.08vw, 40px);
-  border-radius: 10px 10px 100px 10px;
+  border-radius: min(0.52vw, 10px) min(0.52vw, 10px) min(5.21vw, 100px) min(0.52vw, 10px);
   background: linear-gradient(0deg, rgba(142, 216, 238, 0.9) 0%, rgba(142, 216, 238, 0.9) 100%), url(<path-to-image>) lightgray 50%/cover no-repeat;
 }
 .about__descr::after {
@@ -808,6 +809,92 @@ hr {
   margin-top: min(3.13vw, 60px);
   -moz-column-gap: min(1.04vw, 20px);
        column-gap: min(1.04vw, 20px);
+}
+.about__bottomImgBlock {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: min(25.42vw, 488px);
+  background-image: url(../img/about_bottom_img.jpg);
+}
+
+.miss {
+  position: relative;
+  padding-bottom: min(10.42vw, 200px);
+  background-color: #f6f6f6;
+}
+.miss::after {
+  content: "";
+  position: absolute;
+  top: max(-5.21vw, -100px);
+  left: 0;
+  width: 100%;
+  height: min(5.21vw, 100px);
+  border-radius: min(2.6vw, 50px) min(2.6vw, 50px) 0 0;
+  background-color: #f6f6f6;
+}
+.miss h2 {
+  position: relative;
+  z-index: 1000;
+  display: inline;
+  font-size: min(2.5vw, 48px);
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+  color: #000000;
+  text-transform: uppercase;
+}
+.miss ul:has(> .miss__itemElem) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: min(3.13vw, 60px);
+  gap: min(1.04vw, 20px);
+}
+.miss__itemElem {
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+  height: auto;
+  min-height: min(20.83vw, 400px);
+  padding: min(2.08vw, 40px);
+  border-radius: min(0.52vw, 10px) min(0.52vw, 10px) min(5.21vw, 100px) min(0.52vw, 10px);
+  background-color: white;
+}
+.miss__itemElem:first-child {
+  background-color: #99daeb;
+}
+.miss__itemElem > ul {
+  display: flex;
+  flex-direction: column;
+  padding-left: min(0.78vw, 15px);
+  list-style-type: disc;
+  row-gap: min(1.04vw, 20px);
+}
+.miss__itemDecr {
+  font-size: min(1.25vw, 24px);
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  color: #000000;
+}
+.miss h4 {
+  margin-bottom: min(1.56vw, 30px);
+  font-size: min(2.08vw, 40px);
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  color: #000000;
+  text-transform: uppercase;
+}
+.miss h4 + p {
+  max-width: 90%;
+  margin-top: auto;
+  font-size: min(1.25vw, 24px);
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  color: #000000;
 }
 
 .kk__itemLink:hover {
