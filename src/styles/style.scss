@@ -10,7 +10,6 @@
 
 .kk {
   position: relative;
-  margin-top: min(5.21vw, 100px);
   padding-bottom: min(5.21vw, 100px);
   background-color: #f6f6f6;
 
@@ -196,10 +195,182 @@
     & > div {
       max-width: max-content;
       margin-top: min(.52vw, 10px);
-      padding: min(1.04vw, 20px) min(1.30vw, 25px);
+      padding: min(.52vw, 10px) min(1.30vw, 25px);
       border-radius: min(2.08vw, 40px);
       background-color: white;
     }
+  }
+}
+
+.hv {
+  position: relative;
+  padding-bottom: min(10.42vw, 200px);
+  background-color: #f6f6f6;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: max(-5.21vw, -100px);
+    left: 0;
+    width: 100%;
+    height: min(5.21vw, 100px);
+    border-radius: min(2.60vw, 50px) min(2.60vw, 50px) 0 0;
+    background-color: #f6f6f6;
+  }
+
+  & h2 {
+    display: inline;
+    font-size: min(2.50vw, 48px);
+    font-weight: 700;
+    font-style: normal;
+    line-height: normal;
+    color: #000000;
+    text-transform: uppercase;
+  }
+
+  &__videoBlock {
+    position: relative;
+    width: min(65.36vw, 1255px);
+    height: min(36.82vw, 707px);
+    margin-top: min(3.13vw, 60px);
+    margin-left: auto;
+    border-radius: min(.52vw, 10px);
+
+    & > video {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      border-radius: min(.52vw, 10px);
+
+      object-fit: cover;
+    }
+
+    &::after {
+      @include back_img;
+      content: "";
+      position: absolute;
+      z-index: 0;
+      top: min(1.56vw, 30px);
+      left: max(-27.60vw, -530px);
+      width: min(34.69vw, 666px);
+      height: min(33.54vw, 644px);
+      background-image: url(../img/hello_word.png);
+    }
+  }
+}
+
+.about {
+  position: relative;
+  padding-bottom: min(10.42vw, 200px);
+  background-color: white;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: max(-5.21vw, -100px);
+    left: 0;
+    width: 100%;
+    height: min(5.21vw, 100px);
+    border-radius: min(2.60vw, 50px) min(2.60vw, 50px) 0 0;
+    background-color: white;
+  }
+
+  & h2 {
+    display: inline;
+    font-size: min(2.50vw, 48px);
+    font-weight: 700;
+    font-style: normal;
+    line-height: normal;
+    color: #000000;
+    text-transform: uppercase;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__imgBlock {
+    @include back_img;
+    width: min(32.14vw, 617px);
+    height: auto;
+    border-radius: min(.52vw, 10px);
+    background-image: url(../img/about_city.jpg);
+  }
+
+  &__name {
+    position: absolute;
+    top: 0;
+    left: min(6.25vw, 120px);
+  }
+
+  &__titleRed {
+    position: relative;
+    z-index: 1000;
+  }
+
+  &__descr {
+    position: relative;
+    flex-direction: column;
+    min-height: min(22.29vw, 428px);
+    padding: min(2.08vw, 40px);
+    border-radius: 10px 10px 100px 10px;
+    background: linear-gradient(0deg, rgba(142, 216, 238, .90) 0%, rgba(142, 216, 238, .90) 100%), url(<path-to-image>) lightgray 50% / cover no-repeat;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: min(4.17vw, 80px);
+      left: min(10.42vw, 200px);
+      width: min(10.73vw, 206px);
+      height: min(7.29vw, 140px);
+      background-image: url(../img/about_line.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transform: rotate(-8deg);
+    }
+
+    & h3 {
+      margin-bottom: min(1.04vw, 20px);
+      font-size: min(2.08vw, 40px);
+      font-weight: 600;
+      font-style: normal;
+      line-height: normal;
+      color: #000000;
+
+      & + p {
+        max-width: min(25.26vw, 485px);
+        font-size: min(1.25vw, 24px);
+        font-weight: 400;
+        font-style: normal;
+        line-height: min(1.25vw, 24px); /* 100% */
+        color: #000000;
+
+        & + a {
+          display: grid;
+          width: min(7.81vw, 150px);
+          margin-top: auto;
+          padding: min(.52vw, 10px) min(1.04vw, 20px);
+          border-radius: min(.52vw, 10px);
+          font-size: min(1.25vw, 24px);
+          font-weight: 500;
+          font-style: normal;
+          line-height: normal;
+          color: #ffffff;
+          background-color: #b91827;
+
+          place-items: center;
+        }
+      }
+    }
+  }
+
+  &__mainBlock {
+    justify-content: flex-end;
+    margin-top: min(3.13vw, 60px);
+
+    column-gap: min(1.04vw, 20px);
   }
 }
 

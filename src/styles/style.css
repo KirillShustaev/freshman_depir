@@ -478,7 +478,6 @@ hr {
 
 .kk {
   position: relative;
-  margin-top: min(5.21vw, 100px);
   padding-bottom: min(5.21vw, 100px);
   background-color: #f6f6f6;
 }
@@ -648,9 +647,167 @@ hr {
   max-width: -moz-max-content;
   max-width: max-content;
   margin-top: min(0.52vw, 10px);
-  padding: min(1.04vw, 20px) min(1.3vw, 25px);
+  padding: min(0.52vw, 10px) min(1.3vw, 25px);
   border-radius: min(2.08vw, 40px);
   background-color: white;
+}
+
+.hv {
+  position: relative;
+  padding-bottom: min(10.42vw, 200px);
+  background-color: #f6f6f6;
+}
+.hv::after {
+  content: "";
+  position: absolute;
+  top: max(-5.21vw, -100px);
+  left: 0;
+  width: 100%;
+  height: min(5.21vw, 100px);
+  border-radius: min(2.6vw, 50px) min(2.6vw, 50px) 0 0;
+  background-color: #f6f6f6;
+}
+.hv h2 {
+  display: inline;
+  font-size: min(2.5vw, 48px);
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+  color: #000000;
+  text-transform: uppercase;
+}
+.hv__videoBlock {
+  position: relative;
+  width: min(65.36vw, 1255px);
+  height: min(36.82vw, 707px);
+  margin-top: min(3.13vw, 60px);
+  margin-left: auto;
+  border-radius: min(0.52vw, 10px);
+}
+.hv__videoBlock > video {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: min(0.52vw, 10px);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hv__videoBlock::after {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: min(1.56vw, 30px);
+  left: max(-27.6vw, -530px);
+  width: min(34.69vw, 666px);
+  height: min(33.54vw, 644px);
+  background-image: url(../img/hello_word.png);
+}
+
+.about {
+  position: relative;
+  padding-bottom: min(10.42vw, 200px);
+  background-color: white;
+}
+.about::after {
+  content: "";
+  position: absolute;
+  top: max(-5.21vw, -100px);
+  left: 0;
+  width: 100%;
+  height: min(5.21vw, 100px);
+  border-radius: min(2.6vw, 50px) min(2.6vw, 50px) 0 0;
+  background-color: white;
+}
+.about h2 {
+  display: inline;
+  font-size: min(2.5vw, 48px);
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+  color: #000000;
+  text-transform: uppercase;
+}
+.about__container {
+  position: relative;
+}
+.about__imgBlock {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: min(32.14vw, 617px);
+  height: auto;
+  border-radius: min(0.52vw, 10px);
+  background-image: url(../img/about_city.jpg);
+}
+.about__name {
+  position: absolute;
+  top: 0;
+  left: min(6.25vw, 120px);
+}
+.about__titleRed {
+  position: relative;
+  z-index: 1000;
+}
+.about__descr {
+  position: relative;
+  flex-direction: column;
+  min-height: min(22.29vw, 428px);
+  padding: min(2.08vw, 40px);
+  border-radius: 10px 10px 100px 10px;
+  background: linear-gradient(0deg, rgba(142, 216, 238, 0.9) 0%, rgba(142, 216, 238, 0.9) 100%), url(<path-to-image>) lightgray 50%/cover no-repeat;
+}
+.about__descr::after {
+  content: "";
+  position: absolute;
+  bottom: min(4.17vw, 80px);
+  left: min(10.42vw, 200px);
+  width: min(10.73vw, 206px);
+  height: min(7.29vw, 140px);
+  background-image: url(../img/about_line.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transform: rotate(-8deg);
+}
+.about__descr h3 {
+  margin-bottom: min(1.04vw, 20px);
+  font-size: min(2.08vw, 40px);
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  color: #000000;
+}
+.about__descr h3 + p {
+  max-width: min(25.26vw, 485px);
+  font-size: min(1.25vw, 24px);
+  font-weight: 400;
+  font-style: normal;
+  line-height: min(1.25vw, 24px); /* 100% */
+  color: #000000;
+}
+.about__descr h3 + p + a {
+  display: grid;
+  width: min(7.81vw, 150px);
+  margin-top: auto;
+  padding: min(0.52vw, 10px) min(1.04vw, 20px);
+  border-radius: min(0.52vw, 10px);
+  font-size: min(1.25vw, 24px);
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  color: #ffffff;
+  background-color: #b91827;
+  place-items: center;
+}
+.about__mainBlock {
+  justify-content: flex-end;
+  margin-top: min(3.13vw, 60px);
+  -moz-column-gap: min(1.04vw, 20px);
+       column-gap: min(1.04vw, 20px);
 }
 
 .kk__itemLink:hover {
