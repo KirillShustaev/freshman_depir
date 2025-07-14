@@ -111,6 +111,58 @@
                 </ul>
             </div>
         </section>
+        <section class="motiv">
+            <div class="container motiv__conatiner">
+                <div class="motiv__name name">// о мотивации</div>
+                <h2>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Ниже вы можете посмотреть видео, в котором более подробно рассказывается<br>
+                    <div class="motiv__titleRed titleRed">о системе мотивации</div>&nbsp;
+                    для госслужащих<br> и сотрудников продведомственных организаций
+                </h2>
+                <div class="motiv__main">
+                    <ul>
+                        <li><button class="motiv__btn motiv__btn_active">Госслужащий</button></li>
+                        <li><button class="motiv__btn">Сотрудник подведомственной организации или прикрепленный сотрудник</button></li>
+                    </ul>
+                    <div class="motiv__videoBlock">
+                        <video controls poster="img/poster.jpg">
+                            <source src="№" type="video/webm">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="adapt">
+            <div class="adapt__container container">
+                <div class="adapt__name name">// план адаптации</div>
+                <h2>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                    Важным этапом&nbsp;<div class="adapt__titleRed titleRed">адаптации сотрудника</div><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    на новом месте работы является его знакомство<br> с коллегами, инструментами для работы и внутренними правилами
+                </h2>
+                <div class="adapt__mainBlock flex">
+                    <div class="adapt__descr flex">
+                        <h3>
+                            АДАПТАЦИЯ СОТРУДНИКОВ
+                        </h3>
+                        <p>
+                           Быстро влиться в корпоративную культуру Комплекса вам поможет обязательный для прохождения план адаптации, который необходимо проходить совместно с вашим руководителем на портале.
+                        </p>
+                        <a href="#" target="_blank">План адаптации</a>
+                    </div>
+                    <div class="adapt__imgBlock"></div>
+                </div>
+            </div>
+            <div class="adapt__bottomImg flex">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </section>
         <section class="kk">
             <div class="kk__container container">
                 <div class="kk__name name">// корпоративная культура</div>
@@ -213,8 +265,22 @@
                 </ul>
             </div>
         </section>
+
+
     </main>
     <footer></footer>
+    <script>
+        let motivBtn = document.querySelectorAll('.motiv__btn')
+
+        motivBtn.forEach(e => {
+            e.addEventListener("click", ()=> {
+                for(i of motivBtn) {
+                    i.classList.remove("motiv__btn_active")
+                }
+                e.classList.add('motiv__btn_active')
+            })
+        })
+    </script>
 </body>
 
 </html>
