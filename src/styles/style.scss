@@ -690,15 +690,198 @@
   }
 }
 
+.book {
+  position: relative;
+  padding-bottom: min(10.42vw, 200px);
+  background-color: white;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: max(-5.21vw, -100px);
+    left: 0;
+    width: 100%;
+    height: min(5.21vw, 100px);
+    border-radius: min(2.60vw, 50px) min(2.60vw, 50px) 0 0;
+    background-color: white;
+  }
+
+  & h2 {
+    position: relative;
+    z-index: 1000;
+    display: inline;
+    font-size: min(2.50vw, 48px);
+    font-weight: 700;
+    font-style: normal;
+    line-height: normal;
+    color: #000000;
+    text-transform: uppercase;
+  }
+
+  &__main {
+    align-items: center;
+    margin-top: min(3.13vw, 60px);
+  }
+
+  &__imgBook1 {
+    @include back_img;
+    width: min(16.09vw, 309px);
+    height: min(19.64vw, 377px);
+    background-image: url(../img/bool1.png);
+
+    margin-inline: min(3.44vw, 66px) min(2.92vw, 56px);
+  }
+
+  &__imgBook2 {
+    @include back_img;
+    width: min(43.23vw, 830px);
+    height: min(23.23vw, 446px);
+    margin-right: min(1.04vw, 20px);
+    border-radius: min(.52vw, 10px);
+    background-image: url(../img/book2.jpg);
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 72%;
+    padding: min(.52vw, 10px) min(1.04vw, 20px);
+    border-radius: min(.52vw, 10px);
+    font-size: min(1.25vw, 24px);
+    font-weight: 500;
+    font-style: normal;
+    line-height: normal;
+    color: #ffffff;
+    background-color: #b91827;
+
+    column-gap: min(.52vw, 10px);
+  }
+
+  &__downBlock {
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: min(21.09vw, 405px);
+    min-height: min(23.33vw, 448px);
+    padding: min(2.08vw, 40px);
+    border-radius: min(.52vw, 10px);
+    background: linear-gradient(0deg, rgba(142, 216, 238, .90) 0%, rgba(142, 216, 238, .90) 100%), url(<path-to-image>) lightgray 50% / cover no-repeat;
+
+    & > p {
+      font-size: min(1.25vw, 24px);
+      font-weight: 400;
+      font-style: normal;
+      line-height: normal;
+      color: #000000;
+    }
+  }
+}
+
 .motiv__btn_active {
   color: white !important;
   background-color: #b91827 !important;
 }
 
+.footer {
+  background-color: #2e2e2e;
+
+  padding-block: min(5.21vw, 100px);
+
+  & div:has(> a) {
+    @include footer_line;
+    width: min(27.03vw, 519px);
+
+    & > a {
+      @include back_img;
+      display: block;
+      width: min(21.09vw, 405px);
+      height: min(5.00vw, 96px);
+      background-image: url(../img/footer_logo.svg);
+    }
+  }
+
+  & h4 {
+    margin-bottom: min(1.56vw, 30px);
+    font-size: min(1.25vw, 24px);
+    font-weight: 500;
+    font-style: normal;
+    line-height: min(1.04vw, 20px);
+    color: #ffffff;
+  }
+
+  &__contactBlock {
+    @include footer_line;
+    padding-left: min(5.94vw, 114px);
+  }
+
+  &__contactDescr {
+    font-size: min(1.04vw, 20px);
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
+    color: #a8a8a8;
+  }
+
+  &__contactTel {
+    font-size: min(1.04vw, 20px);
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
+    color: #ffffff;
+  }
+
+  &__contactList {
+    flex-direction: column;
+
+    row-gap: min(1.56vw, 30px);
+  }
+
+  &__help {
+    padding-left: min(5.94vw, 114px);
+
+    & ul {
+      display: flex;
+      flex-direction: column;
+
+      row-gap: min(1.56vw, 30px);
+
+      & a {
+        font-size: min(1.04vw, 20px);
+        font-weight: 400;
+        font-style: normal;
+        line-height: normal;
+        color: #ffffff;
+
+        text-decoration-line: underline;
+      }
+    }
+  }
+}
+
 // hover
+.book__link:hover,
+.adapt__descr h3 + p + a:hover,
+.motiv__main > ul button:hover,
+.about__descr h3 + p + a:hover,
 .kk__itemLink:hover {
   border-color: black;
   color: white;
   background-color: black;
+}
+
+.book__link {
+  transition: all .3s ease-in-out;
+}
+
+.adapt__descr h3 + p + a {
+  transition: all .3s ease-in-out;
+}
+
+.motiv__main > ul button {
+  transition: all .3s ease-in-out;
+}
+
+.about__descr h3 + p + a {
+  transition: all .3s ease-in-out;
 }
 

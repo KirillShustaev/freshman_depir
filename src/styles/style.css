@@ -1095,13 +1095,199 @@ hr {
   background-image: url(../img/adapt_4.jpg);
 }
 
+.book {
+  position: relative;
+  padding-bottom: min(10.42vw, 200px);
+  background-color: white;
+}
+.book::after {
+  content: "";
+  position: absolute;
+  top: max(-5.21vw, -100px);
+  left: 0;
+  width: 100%;
+  height: min(5.21vw, 100px);
+  border-radius: min(2.6vw, 50px) min(2.6vw, 50px) 0 0;
+  background-color: white;
+}
+.book h2 {
+  position: relative;
+  z-index: 1000;
+  display: inline;
+  font-size: min(2.5vw, 48px);
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+  color: #000000;
+  text-transform: uppercase;
+}
+.book__main {
+  align-items: center;
+  margin-top: min(3.13vw, 60px);
+}
+.book__imgBook1 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: min(16.09vw, 309px);
+  height: min(19.64vw, 377px);
+  background-image: url(../img/bool1.png);
+  margin-inline: min(3.44vw, 66px) min(2.92vw, 56px);
+}
+.book__imgBook2 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: min(43.23vw, 830px);
+  height: min(23.23vw, 446px);
+  margin-right: min(1.04vw, 20px);
+  border-radius: min(0.52vw, 10px);
+  background-image: url(../img/book2.jpg);
+}
+.book__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 72%;
+  padding: min(0.52vw, 10px) min(1.04vw, 20px);
+  border-radius: min(0.52vw, 10px);
+  font-size: min(1.25vw, 24px);
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  color: #ffffff;
+  background-color: #b91827;
+  -moz-column-gap: min(0.52vw, 10px);
+       column-gap: min(0.52vw, 10px);
+}
+.book__downBlock {
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: min(21.09vw, 405px);
+  min-height: min(23.33vw, 448px);
+  padding: min(2.08vw, 40px);
+  border-radius: min(0.52vw, 10px);
+  background: linear-gradient(0deg, rgba(142, 216, 238, 0.9) 0%, rgba(142, 216, 238, 0.9) 100%), url(<path-to-image>) lightgray 50%/cover no-repeat;
+}
+.book__downBlock > p {
+  font-size: min(1.25vw, 24px);
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  color: #000000;
+}
+
 .motiv__btn_active {
   color: white !important;
   background-color: #b91827 !important;
 }
 
+.footer {
+  background-color: #2e2e2e;
+  padding-block: min(5.21vw, 100px);
+}
+.footer div:has(> a) {
+  position: relative;
+  padding-right: min(5.94vw, 114px);
+  width: min(27.03vw, 519px);
+}
+.footer div:has(> a)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #757575;
+}
+.footer div:has(> a) > a {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: block;
+  width: min(21.09vw, 405px);
+  height: min(5vw, 96px);
+  background-image: url(../img/footer_logo.svg);
+}
+.footer h4 {
+  margin-bottom: min(1.56vw, 30px);
+  font-size: min(1.25vw, 24px);
+  font-weight: 500;
+  font-style: normal;
+  line-height: min(1.04vw, 20px);
+  color: #ffffff;
+}
+.footer__contactBlock {
+  position: relative;
+  padding-right: min(5.94vw, 114px);
+  padding-left: min(5.94vw, 114px);
+}
+.footer__contactBlock::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #757575;
+}
+.footer__contactDescr {
+  font-size: min(1.04vw, 20px);
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  color: #a8a8a8;
+}
+.footer__contactTel {
+  font-size: min(1.04vw, 20px);
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  color: #ffffff;
+}
+.footer__contactList {
+  flex-direction: column;
+  row-gap: min(1.56vw, 30px);
+}
+.footer__help {
+  padding-left: min(5.94vw, 114px);
+}
+.footer__help ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: min(1.56vw, 30px);
+}
+.footer__help ul a {
+  font-size: min(1.04vw, 20px);
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  color: #ffffff;
+  text-decoration-line: underline;
+}
+
+.book__link:hover,
+.adapt__descr h3 + p + a:hover,
+.motiv__main > ul button:hover,
+.about__descr h3 + p + a:hover,
 .kk__itemLink:hover {
   border-color: black;
   color: white;
   background-color: black;
+}
+
+.book__link {
+  transition: all 0.3s ease-in-out;
+}
+
+.adapt__descr h3 + p + a {
+  transition: all 0.3s ease-in-out;
+}
+
+.motiv__main > ul button {
+  transition: all 0.3s ease-in-out;
+}
+
+.about__descr h3 + p + a {
+  transition: all 0.3s ease-in-out;
 }/*# sourceMappingURL=style.css.map */
